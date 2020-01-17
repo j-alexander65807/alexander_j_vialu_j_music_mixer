@@ -3,9 +3,9 @@
 
 This build is a group project done in incremental sprints.
 
-- [] Sprint 1 - Setup, analysis and initial design
-- [] Sprint 2 - Drag and drop, audio, design improvements
-- [] Sprint 3 - Final touches / improvements
+- [ ] Sprint 1 - Setup, analysis and initial design
+- [ ] Sprint 2 - Drag and drop, audio, design improvements
+- [ ] Sprint 3 - Final touches / improvements
 
 #### Assignment Requirements
 Dev notes for the projects (any initial research into events, audio, drag and drop etc).
