@@ -3,6 +3,8 @@
 
 This build is a group project done in incremental spurts.
 
+Spurt 1 - Research and Design
+
 
   - - - -
 ### Getting Started
