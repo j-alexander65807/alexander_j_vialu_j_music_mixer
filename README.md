@@ -1,6 +1,6 @@
 # Music Mixer
 #### Bird Mix
-This is an interactive music mixer with a drag and drop functionality to load audio clips and create
+This is an interactive music mixer application using drag and drop functionality to load audio clips and create
 a dynamic audio experience, trigger svg animation, and play a compiled audio track.
 - - - -
 ### Getting Started
