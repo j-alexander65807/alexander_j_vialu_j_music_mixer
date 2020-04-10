@@ -30,8 +30,15 @@
 		// go and get the dragged element's ID from the data transfer
 		let currentImage = event.dataTransfer.getData("text/plain");
 
+		// create the audio tag and add src
+		let audio = document.createElement("audio");
+	    event.target.appendChild(audio);
 		// add that image to whatever drop zone we're dropping our image on
 		event.target.appendChild(document.querySelector(`#${currentImage}`));
+		audio.src = `audio/${currentImage}.wav`;
+    	audio.play();
+    	// loops the audio
+    	audio.loop = true;
     }
     
     //add Event handlers
