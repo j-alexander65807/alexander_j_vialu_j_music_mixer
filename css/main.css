@@ -62,13 +62,12 @@ header, #environment, #birdContainer {
 .dropZone {
   width: 412px;
   height: 230px;
-  background-color: rgba(225, 0, 225, 0.5);
   float: left;
 	position: relative;
   
 }
 .dropZone img {
-  width: auto;
+  width: 51%;
 	padding: 0;
 	cursor: default;
 	position: absolute;
@@ -90,6 +89,23 @@ header, #environment, #birdContainer {
   border: solid 2px #000;
   border-radius: 5px;
 }
+
+.bass {
+  background: #fd79a8;
+}
+
+.drums {
+  background: #f6e58d;
+}
+
+.melody {
+  background: #55efc4;
+}
+
+.synth {
+  background: #34ace0;
+}
+
 .birdImage {
   width: 100%;
 }
