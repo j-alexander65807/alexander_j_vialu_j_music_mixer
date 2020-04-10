@@ -2,28 +2,63 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Bird Music Mixer</title>
+	<title>Bird Beats</title>
   <link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <h1 class="hidden">Music Mixer Wrapper</h1>
   <section id="wrapper">
-    <h2>Bird Music Mixer</h2>
-    <div id="dropZone"><h2 class="hidden">Drop Zone</h2></div>
+    <h1 class="hidden">Bird Beats - Music Mixer</h1>
+    
+    <header>
+      <h2>Bird Beats</h2>
 
-    <h2 class="hidden">Icon Containers</h2>
+      <div id="fxWrapper">
+        <h2 class="hidden">FX Buttons</h2>
+        
+        <button class="fxButton" name="cloud1">
+          <img src="images/icons/cloudFX1.svg" alt="Cloud Effects 1">
+        </button>
+        <button class="fxButton selected" name="light1">
+          <img src="images/icons/lightFX1.svg" alt="Lighting Effects 1">
+        </button>
+        <button class="fxButton" name="light2">
+          <img src="images/icons/lightFX2.svg" alt="Lighting Effects 2">
+        </button>
+      </div>
+    </header>
+    
+
+
+    <div id="environment">
+      <h2 class="hidden">Drop Zone Environment</h2>
+        
+      <div id="dropZones">
+        <div class="dropZone" id="drpZn_1"></div>
+        <div class="dropZone" id="drpZn_2"></div>
+        <div class="dropZone" id="drpZn_3"></div>
+        <div class="dropZone" id="drpZn_4"></div>
+        <div class="dropZone" id="drpZn_5"></div>
+        <div class="dropZone" id="drpZn_6"></div>
+      </div>
+    </div>
+
+    
     <div id="birdsContainer">
-      <section class="icons"><h2 class="hidden">Bird Icon1</h2></section>
-      <section class="icons"><h2 class="hidden">Bird Icon2</h2></section>
-      <section class="icons"><h2 class="hidden">Bird Icon3</h2></section>
-      <section class="icons"><h2 class="hidden">Bird Icon4</h2></section>
-      <section class="icons"><h2 class="hidden">Bird Icon5</h2></section>
-      <section class="icons"><h2 class="hidden">Bird Icon6</h2></section>
-      <section class="icons"><h2 class="hidden">Bird Icon7</h2></section>
-      <section class="icons"><h2 class="hidden">Bird Icon8</h2></section>
-      <section class="icons"><h2 class="hidden">Bird Icon9</h2></section>
-      <section class="icons"><h2 class="hidden">Bird Icon10</h2></section>
+      <h2 class="hidden">Bird Selection</h2>
+
+      <section class="birdIcon bass"><h2 class="hidden">Bird Icon1</h2></section>
+      <section class="birdIcon bass"><h2 class="hidden">Bird Icon2</h2></section>
+      <section class="birdIcon bass"><h2 class="hidden">Bird Icon3</h2></section>
+      <section class="birdIcon drums"><h2 class="hidden">Bird Icon4</h2></section>
+      <section class="birdIcon drums"><h2 class="hidden">Bird Icon5</h2></section>
+      <section class="birdIcon drums"><h2 class="hidden">Bird Icon6</h2></section>
+      <section class="birdIcon melody"><h2 class="hidden">Bird Icon7</h2></section>
+      <section class="birdIcon melody"><h2 class="hidden">Bird Icon8</h2></section>
+      <section class="birdIcon melody"><h2 class="hidden">Bird Icon9</h2></section>
+      <section class="birdIcon synth"><h2 class="hidden">Bird Icon10</h2></section>
+      <section class="birdIcon synth"><h2 class="hidden">Bird Icon11</h2></section>
+      <section class="birdIcon synth"><h2 class="hidden">Bird Icon12</h2></section>
     </div>
   </section>
 
