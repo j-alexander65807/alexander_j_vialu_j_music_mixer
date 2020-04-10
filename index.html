@@ -13,16 +13,16 @@
     <header>
       <h2>Bird Beats</h2>
 
-      <div id="fxWrapper">
+      <div id="fxContainer">
         <h2 class="hidden">FX Buttons</h2>
         
-        <button class="fxButton" name="cloud1">
+        <button name="cloud1" type="button">
           <img src="images/icons/cloudFX1.svg" alt="Cloud Effects 1">
         </button>
-        <button class="fxButton selected" name="light1">
+        <button name="light1" type="button">
           <img src="images/icons/lightFX1.svg" alt="Lighting Effects 1">
         </button>
-        <button class="fxButton" name="light2">
+        <button name="light2" type="button">
           <img src="images/icons/lightFX2.svg" alt="Lighting Effects 2">
         </button>
       </div>
@@ -33,7 +33,7 @@
     <div id="environment">
       <h2 class="hidden">Drop Zone Environment</h2>
         
-      <div id="dropZones">
+      <div id="dropZoneContainer">
         <div class="dropZone" id="drpZn_1"></div>
         <div class="dropZone" id="drpZn_2"></div>
         <div class="dropZone" id="drpZn_3"></div>
@@ -44,10 +44,12 @@
     </div>
 
     
-    <div id="birdsContainer">
+    <div id="birdContainer">
       <h2 class="hidden">Bird Selection</h2>
 
-      <section class="birdIcon bass"><h2 class="hidden">Bird Icon1</h2></section>
+      <section class="birdIcon bass"> 
+        <img src="images/dawnDrop.png" alt="Dawn" class="birdImage" id="dawnDrop" draggable="true">
+      </section>
       <section class="birdIcon bass"><h2 class="hidden">Bird Icon2</h2></section>
       <section class="birdIcon bass"><h2 class="hidden">Bird Icon3</h2></section>
       <section class="birdIcon drums"><h2 class="hidden">Bird Icon4</h2></section>

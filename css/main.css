@@ -7,6 +7,7 @@ body {
   margin: 0;
 }
 
+
 #wrapper {
   max-width: 1600px;
   margin: 0 auto;
@@ -17,20 +18,32 @@ body {
 #wrapper h2 {
   text-align: center;
   font-size: 34px;
-  padding: 20px 0 10px 0;
+  padding-top: 10px;
 }
 
-
-
+/* Main Margins*/
+header, #environment, #birdContainer {
+  width: 1237px;
+  margin-left: auto;
+  margin-right: auto;
+}
 	
 
-
+#fxContainer {
+ background-color: #111;
+ border: 2px solid #000;
+ border-radius: 5px;
+ width: 250px;
+ padding-left: 5px;
+ 
+}
+#fxContainer button img {
+  width: 50px;
+}
 
 #environment {
   display:block;
-  width: 1237px;
   height: 480px;
-  margin: 0 auto;
   border: solid 2px #000;
 	background:transparent url(../images/env_loop2.png) 0 0 no-repeat;
 	
@@ -41,12 +54,30 @@ body {
 	0%{background-position: 0 0;}
 	100%{background-position: 0 -2880px;}
 }
+#dropZoneContainer {
+  display: inline-block;  
+  margin: 20px 0.5px 0px 0.5px;
+}
 
-#birdsContainer {
-  width: 1237px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
+.dropZone {
+  width: 412px;
+  height: 230px;
+  background-color: rgba(225, 0, 225, 0.5);
+  float: left;
+	position: relative;
+  
+}
+.dropZone img {
+  width: auto;
+	padding: 0;
+	cursor: default;
+	position: absolute;
+}
+
+#birdContainer {
+  
+  margin-top: 10px;
+  
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -58,4 +89,7 @@ body {
   height: 100px;
   border: solid 2px #000;
   border-radius: 5px;
+}
+.birdImage {
+  width: 100%;
 }
