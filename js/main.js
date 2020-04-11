@@ -1,16 +1,24 @@
 (() => {
 	// set up Constants
 	const dropArea = document.querySelector('#dropZoneContainer'),
-				birdImages = document.querySelectorAll('.birdIcon img'),
+				birdImages = document.querySelectorAll('.birdIcon div'),
 				dropZones = document.querySelectorAll('.dropZone'),
 				birds = document.querySelector('.birdIcon');
-
-    
-    // Set up Functions
+	
 
     function allowDrag(event) {
 		console.log('started dragging a bird');
 		event.dataTransfer.setData("text/plain", this.id);
+
+		let birdName = event.dataTransfer.getData("text/plain");
+		//creating new image to be dragged
+		var dragImage = new Image(); 
+		dragImage.src = `images/${birdName}Drag.png`; 
+		event.dataTransfer.setDragImage(dragImage, 80, 80);
+
+		//this.src = `images/${this.id}Drag.png`; // useful but not what i wanted
+		
+		
 	}
 
 	function allowDragOver(event) {
@@ -28,21 +36,24 @@
 		console.log('dropped a bird');
 
 		// go and get the dragged element's ID from the data transfer
-		let currentImage = event.dataTransfer.getData("text/plain");
+		let currentBird = event.dataTransfer.getData("text/plain");
 
 		// create the audio tag and add src
 		let audio = document.createElement("audio");
-	    event.target.appendChild(audio);
-		// add that image to whatever drop zone we're dropping our image on
-		event.target.appendChild(document.querySelector(`#${currentImage}`));
-		audio.src = `audio/${currentImage}.wav`;
+		event.target.appendChild(audio);
+		
+		audio.src = `audio/${currentBird}.wav`;
     	audio.play();
     	// loops the audio
-    	audio.loop = true;
+		audio.loop = true;
+		
+		// add that image to whatever drop zone we're dropping our image on
+		event.target.appendChild(document.querySelector(`#${currentBird}`));
+		
     }
     
     //add Event handlers
-    birdImages.forEach(piece => piece.addEventListener('dragstart', allowDrag));
+    birdImages.forEach(bird => bird.addEventListener('dragstart', allowDrag));
     
     dropZones.forEach(zone => {
         zone.addEventListener('dragover', allowDragOver);

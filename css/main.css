@@ -1,3 +1,5 @@
+
+
 .hidden {
   display: none;
 }
@@ -66,11 +68,22 @@ header, #environment, #birdContainer {
 	position: relative;
   
 }
-.dropZone img {
-  width: 51%;
+.dropZone div {
+  background: url(../images/dawnDance.png) no-repeat;
+  
+ background-size: cover;
+ width: 230px;
+ height: 230px;
+  animation: danceBig 4s steps(17) infinite;
+  animation-play-state: running; 
 	padding: 0;
 	cursor: default;
-	position: absolute;
+  position: relative;
+  top:-28px;
+}
+@keyframes danceBig {
+	0%{background-position: 0 0px;}
+	100%{background-position:  0 -3910px;}
 }
 
 #birdContainer {
@@ -90,6 +103,37 @@ header, #environment, #birdContainer {
   border-radius: 5px;
 }
 
+
+
+
+.birdIcon .birdImage {
+  /*put this next part in js so its dynamic*/
+  background: url(../images/dawnDance.png) no-repeat;
+   /*end js*/
+  background-size: cover;
+  height: 100px;
+  width:100px;
+ 
+  animation: danceSmall 4s steps(17) infinite;
+  animation-play-state: paused;
+ 
+}
+
+
+#dawn {
+  background-position: 0 0;
+}
+
+
+.birdIcon:hover > .birdImage {
+  animation-play-state: running;
+}
+
+@keyframes danceSmall {
+	0%{background-position: 0 0;}
+	100%{background-position: 0 -1700px;}
+}
+
 .bass {
   background: #fd79a8;
 }
@@ -106,6 +150,3 @@ header, #environment, #birdContainer {
   background: #34ace0;
 }
 
-.birdImage {
-  width: 100%;
-}
