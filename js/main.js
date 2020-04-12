@@ -27,29 +27,30 @@
 	}
 
 	function allowDrop(event) {
-		// if a drop zone already has a bird, this function will immediately stop
-		if (this.children.length >= 1) {
-			return;
-		}
+        // if a drop zone already has a bird, this function will immediately stop
+        if (this.children.length >= 1) {
+            return;
+        }
 
-		
-		console.log('dropped a bird');
+        
+        console.log('dropped a bird');
 
-		// go and get the dragged element's ID from the data transfer
-		let currentBird = event.dataTransfer.getData("text/plain");
+        // go and get the dragged element's ID from the data transfer
+        let currentBird = event.dataTransfer.getData("text/plain");
+        
+        // add that image to whatever drop zone we're dropping our image on
+        event.target.appendChild(document.querySelector(`#${currentBird}`));
 
-		// create the audio tag and add src
-		let audio = document.createElement("audio");
-		event.target.appendChild(audio);
-		
-		audio.src = `audio/${currentBird}.wav`;
-    	audio.play();
-    	// loops the audio
-		audio.loop = true;
-		
-		// add that image to whatever drop zone we're dropping our image on
-		event.target.appendChild(document.querySelector(`#${currentBird}`));
-		
+        // create the audio tag and add src
+        let audio = document.createElement("audio");
+        
+        if (event.target.querySelector(`#${currentBird}`).children.length < 1) {
+            event.target.querySelector(`#${currentBird}`).appendChild(audio);
+            audio.src = `audio/${currentBird}.wav`;
+            audio.play();
+            // loops the audio
+            audio.loop = true;
+        }  
     }
     
     //add Event handlers
