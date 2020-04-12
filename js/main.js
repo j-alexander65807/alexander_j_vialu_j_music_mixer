@@ -3,7 +3,11 @@
 	const dropArea = document.querySelector('#dropZoneContainer'),
 				birdImages = document.querySelectorAll('.birdIcon div'),
 				dropZones = document.querySelectorAll('.dropZone'),
-				birds = document.querySelector('.birdIcon');
+                birds = document.querySelector('.birdIcon'),
+                env = document.querySelector('#environment'),
+                btn1 = document.querySelector('#cloud1'),
+                btn2 = document.querySelector('#light1'),
+                btn3 = document.querySelector('#light2');
 	
 
     function allowDrag(event) {
@@ -52,6 +56,18 @@
             audio.loop = true;
         }  
     }
+
+    btn1.addEventListener('click', event => {
+        env.style.background = `transparent url(images/env_loop.png) 0 0 no-repeat`;
+    });
+    
+    btn2.addEventListener('click', event => {
+        env.style.background = `transparent url(images/env_loop2.png) 0 0 no-repeat`;
+    });
+
+    btn3.addEventListener('click', event => {
+        env.style.background = `transparent url(images/env_loop3.png) 0 0 no-repeat`;
+    });  
     
     //add Event handlers
     birdImages.forEach(bird => bird.addEventListener('dragstart', allowDrag));
