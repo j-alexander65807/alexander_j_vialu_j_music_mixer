@@ -7,19 +7,24 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   margin: 0;
+  background-color: #333333;
 }
 
 
 #wrapper {
   max-width: 1600px;
   margin: 0 auto;
+  padding-top: 20px;
   background-color: #333333;
   height: 100%;
 }
 
 #wrapper h2 {
   text-align: center;
-  font-size: 34px;
+  color: rgb(241, 241, 241);
+  font-size: 54px;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 5px;
   padding-top: 10px;
 }
 
@@ -37,10 +42,21 @@ header, #environment, #birdContainer {
  border-radius: 5px;
  width: 250px;
  padding-left: 5px;
+ display: flex;
+ justify-content: space-evenly;
  
 }
 #fxContainer button img {
   width: 50px;
+}
+
+#fxContainer a {
+  text-decoration: none;
+  display: flex;
+}
+
+#fxContainer img {
+  width: 35px;
 }
 
 #environment {
