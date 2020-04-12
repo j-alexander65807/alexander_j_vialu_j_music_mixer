@@ -69,12 +69,12 @@ header, #environment, #birdContainer {
   
 }
 .dropZone div {
-  background: url(../images/dawnDance.png) no-repeat;
+  
   
  background-size: cover;
  width: 230px;
  height: 230px;
-  animation: danceBig 4s steps(17) infinite;
+  animation: danceBig 4s steps(16) infinite;
   animation-play-state: running; 
 	padding: 0;
 	cursor: default;
@@ -83,7 +83,7 @@ header, #environment, #birdContainer {
 }
 @keyframes danceBig {
 	0%{background-position: 0 0px;}
-	100%{background-position:  0 -3910px;}
+	100%{background-position:  0 -3680px;}
 }
 
 #birdContainer {
@@ -107,14 +107,12 @@ header, #environment, #birdContainer {
 
 
 .birdIcon .birdImage {
-  /*put this next part in js so its dynamic*/
-  background: url(../images/dawnDance.png) no-repeat;
-   /*end js*/
+  
   background-size: cover;
   height: 100px;
   width:100px;
  
-  animation: danceSmall 4s steps(17) infinite;
+  animation: danceSmall 4s steps(16) infinite;
   animation-play-state: paused;
  
 }
@@ -131,7 +129,7 @@ header, #environment, #birdContainer {
 
 @keyframes danceSmall {
 	0%{background-position: 0 0;}
-	100%{background-position: 0 -1700px;}
+	100%{background-position: 0 -1600px;}
 }
 
 .bass {
