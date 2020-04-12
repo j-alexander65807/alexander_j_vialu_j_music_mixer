@@ -3,8 +3,8 @@
 	const dropArea = document.querySelector('#dropZoneContainer'),
 				birdImages = document.querySelectorAll('.birdIcon div'),
 				dropZones = document.querySelectorAll('.dropZone'),
-				birds = document.querySelectorAll('.birdImage');
-                birds = document.querySelector('.birdIcon'),
+				birds = document.querySelectorAll('.birdImage'),
+                
                 env = document.querySelector('#environment'),
                 btn1 = document.querySelector('#cloud1'),
                 btn2 = document.querySelector('#light1'),
@@ -53,24 +53,6 @@
         
         console.log('dropped a bird');
 
-		// go and get the dragged element's ID from the data transfer
-		let currentBird = event.dataTransfer.getData("text/plain");
-		
-		// add that image to whatever drop zone we're dropping our image on
-		event.target.appendChild(document.querySelector(`#${currentBird}`));
-
-		// create the audio tag and add src
-		let audio = document.createElement("audio");
-		
-		if (event.target.querySelector(`#${currentBird}`).children.length < 1) {
-			event.target.querySelector(`#${currentBird}`).appendChild(audio);
-			audio.src = `audio/${currentBird}.wav`;
-			audio.play();
-			// loops the audio
-			audio.loop = true;
-		}
-		
-		
 		
         // go and get the dragged element's ID from the data transfer
         let currentBird = event.dataTransfer.getData("text/plain");
