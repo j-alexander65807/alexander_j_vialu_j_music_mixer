@@ -3,21 +3,12 @@
 	const dropArea = document.querySelector('#dropZoneContainer'),
 				birdImages = document.querySelectorAll('.birdIcon div'),
 				dropZones = document.querySelectorAll('.dropZone'),
-<<<<<<< HEAD
 				birds = document.querySelectorAll('.birdImage');
-=======
                 birds = document.querySelector('.birdIcon'),
                 env = document.querySelector('#environment'),
                 btn1 = document.querySelector('#cloud1'),
                 btn2 = document.querySelector('#light1'),
                 btn3 = document.querySelector('#light2');
->>>>>>> master
-	
-	
-	
-	
-	
-	
 	// functions
 
 	function placeBirds() {
@@ -62,7 +53,6 @@
         
         console.log('dropped a bird');
 
-<<<<<<< HEAD
 		// go and get the dragged element's ID from the data transfer
 		let currentBird = event.dataTransfer.getData("text/plain");
 		
@@ -82,7 +72,6 @@
 		
 		
 		
-=======
         // go and get the dragged element's ID from the data transfer
         let currentBird = event.dataTransfer.getData("text/plain");
         
@@ -99,7 +88,6 @@
             // loops the audio
             audio.loop = true;
         }  
->>>>>>> master
     }
 
     btn1.addEventListener('click', event => {
