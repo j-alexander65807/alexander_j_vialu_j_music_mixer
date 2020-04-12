@@ -3,12 +3,35 @@
 	const dropArea = document.querySelector('#dropZoneContainer'),
 				birdImages = document.querySelectorAll('.birdIcon div'),
 				dropZones = document.querySelectorAll('.dropZone'),
+<<<<<<< HEAD
+				birds = document.querySelectorAll('.birdImage');
+=======
                 birds = document.querySelector('.birdIcon'),
                 env = document.querySelector('#environment'),
                 btn1 = document.querySelector('#cloud1'),
                 btn2 = document.querySelector('#light1'),
                 btn3 = document.querySelector('#light2');
+>>>>>>> master
 	
+	
+	
+	
+	
+	
+	// functions
+
+	function placeBirds() {
+		const birdName = ["dawn", "billy"];
+		
+		// set backgrounds for birds
+		birdName.forEach((name, index) => {
+			birdImages[index].style.background = `transparent center/cover url(images/${name}Dance.png`;
+			
+		});		
+
+
+	}
+	placeBirds();
 
     function allowDrag(event) {
 		console.log('started dragging a bird');
@@ -20,7 +43,7 @@
 		dragImage.src = `images/${birdName}Drag.png`; 
 		event.dataTransfer.setDragImage(dragImage, 80, 80);
 
-		//this.src = `images/${this.id}Drag.png`; // useful but not what i wanted
+		
 		
 		
 	}
@@ -39,6 +62,27 @@
         
         console.log('dropped a bird');
 
+<<<<<<< HEAD
+		// go and get the dragged element's ID from the data transfer
+		let currentBird = event.dataTransfer.getData("text/plain");
+		
+		// add that image to whatever drop zone we're dropping our image on
+		event.target.appendChild(document.querySelector(`#${currentBird}`));
+
+		// create the audio tag and add src
+		let audio = document.createElement("audio");
+		
+		if (event.target.querySelector(`#${currentBird}`).children.length < 1) {
+			event.target.querySelector(`#${currentBird}`).appendChild(audio);
+			audio.src = `audio/${currentBird}.wav`;
+			audio.play();
+			// loops the audio
+			audio.loop = true;
+		}
+		
+		
+		
+=======
         // go and get the dragged element's ID from the data transfer
         let currentBird = event.dataTransfer.getData("text/plain");
         
@@ -55,6 +99,7 @@
             // loops the audio
             audio.loop = true;
         }  
+>>>>>>> master
     }
 
     btn1.addEventListener('click', event => {
